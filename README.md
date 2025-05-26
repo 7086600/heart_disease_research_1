@@ -6,3 +6,8 @@ In this project, we’ll investigate some data from a sample patients who were e
 - University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
 - University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.
 - V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.
+
+For this project, we’ll investigate the following:
+
+- serum cholestorol in mg/dl
+- An indicator for whether fasting blood sugar is greater than 120 mg/dl (1 = true; 0 = false)
