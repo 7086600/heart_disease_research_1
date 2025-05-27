@@ -54,3 +54,18 @@ _, p_value = ttest_1samp(no_chol_hd, 240.00)
 print(f'Two sides p-value for the one-sample t-test for patients without heart disease: {p_value:.4f}')
 print(f"One-sided p-value for the one-sample t-test for patients without heart disease: {p_value / 2:.4f}")
 print("Using a significance threshold of 0.05 we can conclude that the mean cholesterol level for patients without heart disease is significantly lower than 240 mg/dl.")
+print()
+
+# task 6: Save the number of patients
+num_patients = len(hd)
+print(f"The number of patients is: {num_patients}")
+print()
+
+# task 7: Calculate the number of patients with fasting blood sugar (fbs) greater than 120
+num_highfbs_patients = np.sum(hd['fbs'] == 1.0)
+print(f"The number of patients with fasting blood sugar (fbs) greater than 120 is: {num_highfbs_patients}")
+print()
+# with filtering
+# filt_fbs = (hd['fbs'] == 1.0)
+# print(len(hd[filt_fbs]))
+
