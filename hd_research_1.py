@@ -1,7 +1,7 @@
 # import necessary libraries
 import pandas as pd
 import numpy as np
-from scipy.stats import ttest_1samp
+from scipy.stats import ttest_1samp, binomtest
 
 # load and inspect the dataset
 hd = pd.read_csv('heart_disease.csv', sep=',')
@@ -69,3 +69,12 @@ print()
 # filt_fbs = (hd['fbs'] == 1.0)
 # print(len(hd[filt_fbs]))
 
+# task 8: estimated number of people with diabetes (8%)
+est_diabetes = 0.08 * num_patients
+print(f"The estimated number of people with diabetes: {est_diabetes:.0f}")
+print()
+
+# task 9-10: implement a binomial test
+p_value = binomtest(num_highfbs_patients, n=num_patients, p=0.08, alternative='greater')
+print(f"The p-value: {p_value.pvalue:.6f}")
+print("This p-value is less than 0.05, indicating that this sample likely comes from a population where more than 8% of people have fbs > 120 mg/dl.")
